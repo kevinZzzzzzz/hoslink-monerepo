@@ -1,13 +1,18 @@
 <template>
-  <DefaultLayout>
+  <LayoutComp>
     <router-view></router-view>
-  </DefaultLayout>
+  </LayoutComp>
 </template>
 
 <script setup lang="ts">
-import { RouterView } from 'vue-router';
-import DefaultLayout from '@/layout/default.vue'
-
+import Layouts from '@hoslink/layout'
+const route = useRoute()
+const hasLayout = computed(() => {
+  return route.meta.hasLayout
+})
+const LayoutComp = computed(() => {
+  return hasLayout.value ? Layouts.DefaultLayout : Layouts.FullPageLayout
+})
 </script>
 
 <style scoped lang="less">

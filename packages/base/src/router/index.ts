@@ -1,12 +1,3 @@
-/*
- * @Author: kevinZzzzzz
- * @Date: 2023-05-19 16:14:40
- * @version:
- * @LastEditors: kevinZzzzzz
- * @LastEditTime: 2023-06-02 11:40:14
- * @Description: 路由配置
- * @FilePath: \vue-ts-vite\src\router\index.ts
- */
 import { createRouter, createWebHashHistory, type RouteRecordRaw } from 'vue-router'
 
 const routes: RouteRecordRaw[] = [
@@ -22,11 +13,22 @@ const routes: RouteRecordRaw[] = [
         name: 'Home',
         meta: {
           title: '',
-          requireAuth: false // 是否需要登录校验
+          requireAuth: false, // 是否需要登录校验
+          hasLayout: true // 是否需要layout布局
         },
         component: async () => await import(/* webpackChunkName: "home" */ '@/pages/home/index.vue')
       }
     ]
+  },
+  {
+    path: '/login',
+    name: 'Login',
+    meta: {
+      title: '',
+      requireAuth: false, // 是否需要登录校验
+      hasLayout: false // 是否需要layout布局
+    },
+    component: async () => await import(/* webpackChunkName: "home" */ '@/pages/login/index.vue')
   },
   {
     path: '/:notFoundPath',

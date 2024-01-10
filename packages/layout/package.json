@@ -12,6 +12,10 @@
   "license": "ISC",
   "dependencies": {
     "@ant-design/icons-vue": "^7.0.1",
-    "ant-design-vue": "^4.1.0"
+    "ant-design-vue": "^4.1.0",
+    "vue": "^3.2.47"
+  },
+  "devDependencies": {
+    "vue-tsc": "^0.39.5"
   }
 }

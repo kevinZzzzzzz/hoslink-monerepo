@@ -25,9 +25,6 @@ export default ({mode, command}) => {
       AutoImport({
         imports:["vue","vue-router"], // 自动引入
         dts: 'src/type/auto-import.d.ts', // 生成文件的位置
-        eslintrc: { // 开启eslint校验
-          enabled: true,
-        },
       }),
       manualChunksPlugin(),
       viteImagemin({ // 压缩图片
