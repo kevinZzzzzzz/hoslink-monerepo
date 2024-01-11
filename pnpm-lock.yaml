@@ -150,12 +150,14 @@ importers:
   packages/layout:
     specifiers:
       '@ant-design/icons-vue': ^7.0.1
-      ant-design-vue: ^4.1.0
+      ant-design-vue: 4.x
+      less: ^4.1.3
       vue: ^3.2.47
       vue-tsc: ^0.39.5
     dependencies:
       '@ant-design/icons-vue': registry.npmmirror.com/@ant-design/icons-vue/7.0.1_vue@3.4.7
       ant-design-vue: registry.npmmirror.com/ant-design-vue/4.1.0_vue@3.4.7
+      less: registry.npmmirror.com/less/4.2.0
       vue: registry.npmmirror.com/vue/3.4.7_typescript@5.3.3
     devDependencies:
       vue-tsc: registry.npmmirror.com/vue-tsc/0.39.5_typescript@5.3.3

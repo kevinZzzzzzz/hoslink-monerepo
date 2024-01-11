@@ -5,6 +5,7 @@ import piniaPluginPersist from 'pinia-plugin-persist'
 import router from './router/index'
 import api from '@/Api'
 import App from './App.vue'
+import {Antd} from '@hoslink/layout'
 
 declare module 'vue' {
   export interface ComponentCustomProperties {
@@ -18,4 +19,4 @@ app.config.globalProperties.$api = { ...api }
 app.config.errorHandler = (err, vm, info) => {
   console.error()
 }
-app.use(store).use(router).mount('#app')
+app.use(store).use(router).use(Antd).mount('#app')
