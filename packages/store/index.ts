@@ -1,14 +1,6 @@
-/*
- * @Author: kevinZzzzzz
- * @Date: 2023-05-11 09:30:47
- * @version:
- * @LastEditors: kevinZzzzzz
- * @LastEditTime: 2023-06-02 11:17:46
- * @Description: pinia状态管理器
- * @FilePath: \vue-ts-vite\src\store\index.ts
- */
-import { defineStore } from 'pinia'
-
+import { defineStore, createPinia} from 'pinia'
+import piniaPluginPersist from 'pinia-plugin-persist'
+createPinia().use(piniaPluginPersist)
 /*
   for example
 */
@@ -30,5 +22,9 @@ export const vueStore = defineStore({
     }
   },
   getters: {},
-  actions: {}
+  actions: {
+    setXxx(data: any) {
+      this.xxx = data
+    }
+  }
 })

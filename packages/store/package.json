@@ -1,0 +1,18 @@
+{
+  "name": "@hoslink/store",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "private": true,
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [],
+  "author": "",
+	"dependencies": {
+		"pinia": "^2.0.35",
+		"pinia-plugin-persist": "^1.0.0",
+		"vue": "^3.2.47"
+	},
+  "license": "ISC"
+}
