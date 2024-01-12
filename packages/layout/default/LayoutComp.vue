@@ -3,7 +3,21 @@
     <a-layout-sider :style="siderStyle">Sider</a-layout-sider>
     <a-layout>
       <a-layout-header :style="headerStyle">Header</a-layout-header>
-      <a-layout-content :style="contentStyle">Content</a-layout-content>
+      
+      <a-layout-content
+        :style="{ padding: '0', background: '#fff', borderTop: '1px solid #ccc' }"
+      >
+        <ContentComp>
+          <!-- <keep-alive>
+            <slot></slot> -->
+          <!-- </keep-alive> -->
+          <router-view v-slot="{ Component }">
+            <keep-alive>
+              <component :is="Component" />
+            </keep-alive>
+          </router-view>
+        </ContentComp>
+      </a-layout-content>
       <a-layout-footer :style="footerStyle">Footer</a-layout-footer>
     </a-layout>
   </a-layout>
@@ -22,7 +36,8 @@ const headerStyle: CSSProperties = {
   height: 64,
   paddingInline: 50,
   lineHeight: '64px',
-  backgroundColor: '#7dbcea',
+  backgroundColor: '#fff',
+  border: '1px solid #d9d9d9',
 };
 
 const contentStyle: CSSProperties = {
@@ -30,20 +45,23 @@ const contentStyle: CSSProperties = {
   minHeight: 120,
   lineHeight: '120px',
   color: '#fff',
-  backgroundColor: '#108ee9',
+  backgroundColor: '#fff',
+  border: '1px solid #d9d9d9',
 };
 
 const siderStyle: CSSProperties = {
   textAlign: 'center',
   lineHeight: '120px',
   color: '#fff',
-  backgroundColor: '#3ba0e9',
+  backgroundColor: '#fff',
+  border: '1px solid #d9d9d9',
 };
 
 const footerStyle: CSSProperties = {
   textAlign: 'center',
   color: '#fff',
-  backgroundColor: '#7dbcea',
+  backgroundColor: '#fff',
+  border: '1px solid #d9d9d9',
 };
 </script>
 
