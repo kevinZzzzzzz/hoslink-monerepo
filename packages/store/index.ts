@@ -1,5 +1,6 @@
 import { defineStore, createPinia} from 'pinia'
 import piniaPluginPersist from 'pinia-plugin-persist'
+import { useMainStore } from './module/useMainStore'
 createPinia().use(piniaPluginPersist)
 /*
   for example
@@ -28,3 +29,6 @@ export const vueStore = defineStore({
     }
   }
 })
+export {
+  useMainStore
+}

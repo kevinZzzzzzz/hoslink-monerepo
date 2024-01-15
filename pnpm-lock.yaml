@@ -150,15 +150,21 @@ importers:
   packages/layout:
     specifiers:
       '@ant-design/icons-vue': ^7.0.1
+      '@hoslink/store': workspace:^1.0.0
       ant-design-vue: 4.x
+      hoslink-xxx: ^1.1.2
       less: ^4.1.3
       vue: ^3.2.47
+      vue-router: ^4.1.6
       vue-tsc: ^0.39.5
     dependencies:
       '@ant-design/icons-vue': registry.npmmirror.com/@ant-design/icons-vue/7.0.1_vue@3.4.7
+      '@hoslink/store': link:../store
       ant-design-vue: registry.npmmirror.com/ant-design-vue/4.1.0_vue@3.4.7
+      hoslink-xxx: registry.npmmirror.com/hoslink-xxx/1.1.2
       less: registry.npmmirror.com/less/4.2.0
       vue: registry.npmmirror.com/vue/3.4.7_typescript@5.3.3
+      vue-router: registry.npmmirror.com/vue-router/4.2.5_vue@3.4.7
     devDependencies:
       vue-tsc: registry.npmmirror.com/vue-tsc/0.39.5_typescript@5.3.3
 

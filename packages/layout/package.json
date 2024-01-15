@@ -12,9 +12,12 @@
   "license": "ISC",
   "dependencies": {
     "@ant-design/icons-vue": "^7.0.1",
+    "@hoslink/store": "workspace:^1.0.0",
     "ant-design-vue": "4.x",
+    "hoslink-xxx": "^1.1.2",
+    "less": "^4.1.3",
     "vue": "^3.2.47",
-		"less": "^4.1.3"
+    "vue-router": "^4.1.6"
   },
   "devDependencies": {
     "vue-tsc": "^0.39.5"

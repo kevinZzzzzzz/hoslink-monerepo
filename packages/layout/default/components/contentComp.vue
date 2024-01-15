@@ -12,7 +12,12 @@
     </div>
 </template>
 
-<script lang="ts" setup>
+<script lang='ts'>
+export default {
+  name: 'ContentComp'
+}
+</script>
+<script setup lang="ts">
 import { getStorage, setStorage } from "hoslink-xxx";
 import { computed, ref, reactive, getCurrentInstance, ComponentInternalInstance, nextTick, watch, watchEffect, onMounted } from "vue";
 import { useRouter, useRoute } from "vue-router";
@@ -85,11 +90,11 @@ const onEdit = (targetKey: string) => {
 <style lang="less" scoped>
 .contentComp {
     .context {
-        padding: 0 24px;
+        padding: 0 8px;
         > :deep(.ant-card) {
             // width: 100%;
             // overflow-x: scroll;
-            height: 85vh;
+            height: 80vh;
             overflow-y: scroll;
             box-shadow: 10px 10px 30px 10px #ddd;
         }

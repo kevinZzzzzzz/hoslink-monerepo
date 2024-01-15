@@ -12,7 +12,7 @@ export default {
   name: 'DefaultLayout'
 }
 </script>
-<script lang="ts" setup>
+<script setup lang="ts" >
 import {ref, onMounted, reactive} from 'vue'
 import LayoutComp from './LayoutComp.vue'
 </script>
