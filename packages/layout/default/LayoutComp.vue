@@ -1,14 +1,18 @@
 <template>
-  <a-layout style="height: 100vh" >
-    <a-layout-sider v-model:collapsed="store.collapsed" :trigger="null" collapsible :style="siderStyle">
+  <a-layout style="height: 100vh">
+    <a-layout-sider
+      v-model:collapsed="store.collapsed" :style="siderStyle"
+      :trigger="null"
+      collapsible
+    >
       <SiderComp />
     </a-layout-sider>
     <a-layout>
       <a-layout-header :style="headerStyle">
         <div class="header">
           <div class="header_fold" @click="changeColStyle">
-            <MenuUnfoldOutlined v-if="store.collapsed"/>
-            <MenuFoldOutlined v-else/>
+            <MenuUnfoldOutlined v-if="store.collapsed" />
+            <MenuFoldOutlined v-else />
           </div>
         </div>
       </a-layout-header>
@@ -24,7 +28,7 @@
       <a-layout-footer :style="footerStyle">
         <CopyRight />
       </a-layout-footer>
-    </a-layout> 
+    </a-layout>
   </a-layout>
 </template>
 
@@ -36,7 +40,7 @@ export default {
 <script setup lang='ts'>
 import { CSSProperties, onMounted } from 'vue';
 import { MenuUnfoldOutlined, MenuFoldOutlined } from "@ant-design/icons-vue";
-import {useMainStore} from '@hoslink/store'
+import { useMainStore } from '@hoslink/store'
 import ContentComp from './components/ContentComp.vue'
 import CopyRight from './components/CopyRight.vue'
 import SiderComp from './components/SiderComp.vue'
@@ -65,25 +69,23 @@ const siderStyle: CSSProperties = {
 const footerStyle: CSSProperties = {
   textAlign: 'center',
   color: '#fff',
-  padding: 0,
   // maxHeight: 40,
   overflow: 'hidden',
   padding: '5px 0px',
   backgroundColor: '#fff',
-};
+}
 
 const changeColStyle = () => {
   const collapsed = store.collapsed
   store.changeCollapsed(!collapsed)
 }
-onMounted(() => {
-})
 </script>
 
 <style scoped lang="less">
 .header {
   height: 100%;
   display: flex;
+
   &_fold {
     font-size: 20px;
     cursor: pointer;

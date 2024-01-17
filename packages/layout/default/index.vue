@@ -1,8 +1,8 @@
 <template>
-  <div class='main'>
+  <div class="main">
     <div class="main__context">
       <LayoutComp>
-        <slot></slot>
+        <slot />
       </LayoutComp>
     </div>
   </div>
@@ -12,7 +12,7 @@ export default {
   name: 'DefaultLayout'
 }
 </script>
-<script setup lang="ts" >
+<script setup lang="ts">
 import {ref, onMounted, reactive} from 'vue'
 import LayoutComp from './LayoutComp.vue'
 </script>

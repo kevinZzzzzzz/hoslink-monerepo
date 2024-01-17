@@ -1,5 +1,7 @@
 <template>
-  <h1 @click="getTest">Home Page</h1>
+  <h1 @click="getTest">
+    Home Page
+  </h1>
 </template>
 
 

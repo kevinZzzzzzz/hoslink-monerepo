@@ -1,7 +1,7 @@
 <template>
-  <div class='main'>
+  <div class="main">
     <div class="main__context">
-      <slot></slot>
+      <slot />
     </div>
   </div>
 </template>
