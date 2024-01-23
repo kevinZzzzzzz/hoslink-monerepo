@@ -1,5 +1,5 @@
 <template>
-  <a-layout style="height: 100vh">
+  <a-layout :style="layoutStyle">
     <a-layout-sider
       v-model:collapsed="store.collapsed" :style="siderStyle"
       :trigger="null"
@@ -46,9 +46,14 @@ import CopyRight from './components/CopyRight.vue'
 import SiderComp from './components/SiderComp.vue'
 
 const store = useMainStore()
+const layoutStyle: CSSProperties = {
+  height: '100vh',
+  borderRadius: '15px',
+  overflow: 'hidden',
+};
 const headerStyle: CSSProperties = {
   textAlign: 'left',
-  height: 64,
+  height: '74px',
   padding: '0 20px',
   backgroundColor: '#fff',
 };
@@ -76,8 +81,7 @@ const footerStyle: CSSProperties = {
 }
 
 const changeColStyle = () => {
-  const collapsed = store.collapsed
-  store.changeCollapsed(!collapsed)
+  store.changeCollapsed()
 }
 </script>
 
