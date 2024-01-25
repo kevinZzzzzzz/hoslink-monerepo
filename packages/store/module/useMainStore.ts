@@ -7,7 +7,7 @@ export const useMainStore = defineStore({
     enabled: true,
     strategies: [
       {
-        key: 'vue',
+        key: 'mainStore',
         storage: localStorage
       }
     ]

@@ -1,0 +1,133 @@
+{
+  "menuData": [
+    {
+      "id": 1,
+      "name": "主导航",
+      "shortName": "主导航",
+      "platform": "HOSPITAL,STATION",
+      "icon": "",
+      "path": "",
+      "children": [
+        {
+          "id": "162",
+          "platform": "HOSPITAL",
+          "parentId": "1",
+          "department": "",
+          "name": "系统看板 【输血科】",
+          "shortName": "系统看板",
+          "icon": "DotChartOutlined",
+          "path": "/dashboard/system",
+          "children": []
+        },{
+          "id": "163",
+          "platform": "STATION",
+          "parentId": "1",
+          "department": "",
+          "name": "系统看板-血站",
+          "shortName": "系统看板",
+          "icon": "DotChartOutlined",
+          "path": "/dashboard/system-station",
+          "children": []
+        },{
+          "id": "133",
+          "platform": "HOSPITAL",
+          "parentId": "1",
+          "department": "",
+          "name": "领血凭证 【临床护士，无需求不要授权】",
+          "shortName": "领血凭证",
+          "icon": "SnippetsOutlined",
+          "path": "/dashboard/nurse-home",
+          "children": []
+        },{
+          "id": "83",
+          "platform": "HOSPITAL",
+          "parentId": "1",
+          "department": "",
+          "name": "输血前评估 【临床医师，无需求不要授权】",
+          "shortName": "输血前评估", 
+          "icon": "FormOutlined",
+          "path": "/pretransfusion-assess",
+          "children": []
+        },{
+          "id": "48",
+          "platform": "HOSPITAL",
+          "parentId": "1",
+          "department": "",
+          "name": "血液管理 【输血科】",
+          "shortName": "血液管理", 
+          "icon": "AppstoreOutlined",
+          "path": "",
+          "children": [
+            {
+              "id": "172",
+              "platform": "HOSPITAL",
+              "parentId": "48",
+              "department": "",
+              "name": "用血计划 【输血科，江苏应标，不要授权】",
+              "shortName": "用血计划", 
+              "path": "/blood-plan"
+            },{
+              "id": "7",
+              "platform": "HOSPITAL",
+              "parentId": "48",
+              "department": "",
+              "name": "血液预订 【输血科】",
+              "shortName": "血液预订", 
+              "path": "/blood-reservations"
+            }
+          ]
+        }
+      ]
+    },{
+      "id": 20,
+      "name": "管理",
+      "shortName": "管理",
+      "platform": "SUPERVISE",
+      "icon": "",
+      "path": "",
+      "children": [
+        {
+          "id": "27",
+          "platform": "SUPERVISE",
+          "parentId": "20",
+          "department": "",
+          "name": "权限管理 【管理员功能，不要授权给输血科】",
+          "shortName": "权限管理",
+          "icon": "UsergroupAddOutlined",
+          "path": "",
+          "children": [
+            {
+              "id": "2003",
+              "platform": "SUPERVISE",
+              "parentId": "27",
+              "department": "",
+              "name": "角色管理",
+              "shortName": "角色管理", 
+              "path": "/admin/authority/role-v2"
+            }
+          ]
+        },{
+          "id": "251",
+          "platform": "HOSPITAL",
+          "parentId": "20",
+          "department": "",
+          "name": "系统配置（医院端）",
+          "shortName": "系统配置",
+          "icon": "SettingOutlined",
+          "path": "/setting-hospital",
+          "children": []
+        },{
+          "id": "340",
+          "platform": "STATION",
+          "parentId": "20",
+          "department": "",
+          "name": "系统配置（血站端）",
+          "shortName": "系统配置",
+          "icon": "SettingOutlined",
+          "path": "/station/setting-station",
+          "children": []
+        }
+      ]
+    }
+  ]
+}

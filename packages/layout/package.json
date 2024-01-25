@@ -21,5 +21,10 @@
   },
   "devDependencies": {
     "vue-tsc": "^0.39.5"
+  },
+  "eslintConfig": {
+    "rules": {
+      "vue/no-multiple-template-root": "off"
+    }
   }
 }
