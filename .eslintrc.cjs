@@ -38,6 +38,7 @@ module.exports = {
     "@typescript-eslint/ban-types": "off", // 是否禁止特定类型（抽象定义）
     "@typescript-eslint/no-unused-vars": "off", // 是否禁止定义变量未使用
     "@typescript-eslint/prefer-const": "off", // 是否禁止偏好const
+    "@typescript-eslint/ban-ts-comment": "off",
     "@typescript-eslint/no-var-requires": 0, // 是否禁止使用require定义依赖
     'vue/no-side-effects-in-computed-properties': 0, // 是否禁止计算属性的副作用
     "vue/max-attributes-per-line": ["error", { // vue元素单行属性控制
