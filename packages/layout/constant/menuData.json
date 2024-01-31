@@ -16,7 +16,7 @@
           "name": "系统看板 【输血科】",
           "shortName": "系统看板",
           "icon": "DotChartOutlined",
-          "path": "/dashboard/system",
+          "path": "/home",
           "children": []
         },{
           "id": "163",

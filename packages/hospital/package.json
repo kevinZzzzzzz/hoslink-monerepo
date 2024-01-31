@@ -12,6 +12,9 @@
 		"docker": "sh bin/setup_host.sh bash"
 	},
 	"dependencies": {
+		"@hoslink/http": "workspace:*",
+		"@hoslink/layout": "workspace:*",
+		"@hoslink/store": "workspace:^1.0.0",
 		"axios": "^1.3.6",
 		"less": "^4.1.3",
 		"pinia": "^2.0.35",

@@ -5,3 +5,8 @@ declare module '*.vue' {
   const component: DefineComponent<{}, {}, any>
   export default component
 }
+
+declare let hex_md5: any;
+declare interface Window {
+  eventCenterForAppNameVite: any
+}

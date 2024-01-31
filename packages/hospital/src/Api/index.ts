@@ -1,5 +1,5 @@
-import http from '@/Http'
-import { type AxiosResponse } from 'axios'
+import { AxiosResponse } from "@hoslink/http"
+import http from '@hoslink/http'
 // 设置代理
 const setProxy = (url: string): string => {
   return !import.meta.env.PROD ? '/api' + url : url
@@ -12,5 +12,8 @@ export default {
   */
   async xxx (data: any = {}): Promise<AxiosResponse<any, any>> {
     return await http.post(setProxy('/xxx'), { data }, true, true)
+  },
+  async getTest (data: any = {}): Promise<AxiosResponse<any, any>> {
+    return await http.get(setProxy('/kevin/test'), true, true)
   }
 }

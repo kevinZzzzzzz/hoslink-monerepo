@@ -26,6 +26,15 @@ const routes: RouteRecordRaw[] = [
           hasLayout: true // 是否需要layout布局
         },
         component: async () => await import(/* webpackChunkName: "about" */ '@/pages/about/index.vue')
+      },
+      {
+        path: 'hos/:pathMatch(.*)*',
+        name: 'HosPage',
+        meta: {
+          requireAuth: false, // 是否需要登录校验
+          hasLayout: true // 是否需要layout布局
+        },
+        component: async () => await import(/* webpackChunkName: "hos" */ '@/pages/hosPage.vue')
       }
     ]
   },

@@ -1,24 +1,18 @@
-/*
- * @Author: kevinZzzzzz
- * @Date: 2023-05-19 16:14:40
- * @version:
- * @LastEditors: kevinZzzzzz
- * @LastEditTime: 2023-06-02 11:40:14
- * @Description: 路由配置
- * @FilePath: \vue-ts-vite\src\router\index.ts
- */
-import { createRouter, createWebHashHistory, type RouteRecordRaw } from 'vue-router'
 
+import { createRouter, createWebHashHistory, type RouteRecordRaw } from 'vue-router'
+const configUrl = (url: string) => {
+  return !!window.microApp ? `${window.__MICRO_APP_BASE_ROUTE__}${url}` : url
+}
 const routes: RouteRecordRaw[] = [
   {
     path: '/',
-    redirect: '/home',
+    redirect: configUrl('/home'),
     meta: {
       title: ''
     },
     children: [
       {
-        path: '/home',
+        path: configUrl('/home'),
         name: 'Home',
         meta: {
           title: '',
@@ -28,21 +22,21 @@ const routes: RouteRecordRaw[] = [
       }
     ]
   },
-  {
-    path: '/:notFoundPath',
-    redirect: '/404'
-  },
-  {
-    path: '/404',
-    meta: {
-      title: '404',
-      requireAuth: false
-    },
-    component: async () => await import(/* webpackChunkName: "404" */ '@/pages/404/index.vue')
-  }
+  // {
+  //   path: '/:notFoundPath',
+  //   redirect: '/404'
+  // },
+  // {
+  //   path: '/404',
+  //   meta: {
+  //     title: '404',
+  //     requireAuth: false
+  //   },
+  //   component: async () => await import(/* webpackChunkName: "404" */ '@/pages/404/index.vue')
+  // }
 ]
 const router = createRouter({
-  history: createWebHashHistory(''),
+  history: createWebHashHistory(),
   routes
 })
 
