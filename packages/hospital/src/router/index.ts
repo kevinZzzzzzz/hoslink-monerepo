@@ -1,11 +1,11 @@
 
 import { createRouter, createWebHashHistory, type RouteRecordRaw } from 'vue-router'
 const configUrl = (url: string) => {
-  return !!window.microApp ? `${window.__MICRO_APP_BASE_ROUTE__}${url}` : url
+  return window.frames.length != parent.frames.length ? `/hos${url}` : url
 }
 const routes: RouteRecordRaw[] = [
   {
-    path: '/',
+    path: configUrl('/'),
     redirect: configUrl('/home'),
     meta: {
       title: ''
@@ -19,6 +19,14 @@ const routes: RouteRecordRaw[] = [
           requireAuth: false // 是否需要登录校验
         },
         component: async () => await import(/* webpackChunkName: "home" */ '@/pages/home/index.vue')
+      },{
+        path: configUrl('/about'),
+        name: 'About',
+        meta: {
+          title: '',
+          requireAuth: false // 是否需要登录校验
+        },
+        component: async () => await import(/* webpackChunkName: "about" */ '@/pages/about/index.vue')
       }
     ]
   },

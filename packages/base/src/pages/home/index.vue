@@ -1,6 +1,6 @@
 <template>
-  <h1 @click="getTest">
-    Home Page
+  <h1 @click="addCount">
+    Home Page {{ store.count }}
   </h1>
 </template>
 
@@ -12,11 +12,14 @@ export default {
 </script>
 <script setup lang='ts'>
 import { getCurrentInstance } from 'vue';
+import {useTestStore} from '@hoslink/store';
 const {proxy} = getCurrentInstance() as any
-const getTest = () => {
-  proxy?.$api.getTest().then(res => {
-    console.log(res, 123123)
-  })
+const store = useTestStore()
+const addCount = () => {
+  // proxy?.$api.getTest().then(res => {
+  //   console.log(res, 123123)
+  // })
+  store.addCount()
 }
 </script>
 

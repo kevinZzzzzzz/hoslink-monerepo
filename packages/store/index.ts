@@ -2,6 +2,7 @@ import { defineStore, createPinia} from 'pinia'
 import piniaPluginPersist from 'pinia-plugin-persist'
 import { useMainStore } from './module/useMainStore'
 import { environmentStore } from './module/environmentStore'
+import { useTestStore } from './module/testStore'
 createPinia().use(piniaPluginPersist)
 /*
   for example
@@ -32,5 +33,6 @@ createPinia().use(piniaPluginPersist)
 // })
 export {
   useMainStore,
-  environmentStore
+  environmentStore,
+  useTestStore
 }
